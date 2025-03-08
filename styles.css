@@ -1,0 +1,76 @@
+/* General styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px; /* Increased padding */
+    width: 600px; /* Increased width */
+    height: 800px; /* Increased height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Scroll if content exceeds box height */
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Form input styles */
+input[type="text"], input[type="tel"], input[type="email"], select, input[type="file"], input[type="datetime-local"] {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.1em; /* Slightly larger text */
+}
+
+button {
+    width: 100%;
+    padding: 15px; /* Increased padding */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em; /* Slightly larger button text */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#imagePreview {
+    margin-top: 10px;
+}
+
+/* Spinner style */
+.spinner {
+    font-size: 1.5em;
+    color: #28a745;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Label styles */
+label {
+    font-size: 1.1em; /* Slightly larger label text */
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Add spacing between form elements */
+br {
+    margin-bottom: 15px;
+}
