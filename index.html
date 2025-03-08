@@ -11,16 +11,13 @@
         <h1>Emergency Animal Report Form</h1>
         
         <form id="animalReportForm">
-            <!-- Location of the incident (Auto-detect GPS location) -->
             <label for="location">Location of Incident:</label>
             <input type="text" id="location" name="location" placeholder="Enter location or address" required><br><br>
             <button type="button" id="getLocation">Use Current Location</button><br><br>
 
-            <!-- Date and time of incident -->
             <label for="dateTime">Date and Time of Incident:</label>
             <input type="datetime-local" id="dateTime" name="dateTime" required><br><br>
 
-            <!-- Type of animal -->
             <label for="animalType">Type of Animal:</label>
             <select id="animalType" name="animalType" required>
                 <option value="dog">Dog</option>
@@ -29,7 +26,6 @@
                 <option value="other">Other</option>
             </select><br><br>
 
-            <!-- Severity of injury -->
             <label for="severity">Severity of Injury:</label>
             <select id="severity" name="severity" required>
                 <option value="minor">Minor</option>
@@ -37,12 +33,10 @@
                 <option value="critical">Critical</option>
             </select><br><br>
 
-            <!-- Upload pictures -->
             <label for="animalImage">Upload Picture (Optional):</label>
             <input type="file" id="animalImage" name="animalImage" accept="image/*"><br><br>
             <img id="imagePreview" src="" alt="Image Preview" style="display:none; max-width: 200px;"><br><br>
 
-            <!-- Contact details (optional) -->
             <label for="name">Name (Optional):</label>
             <input type="text" id="name" name="name"><br><br>
 
@@ -52,14 +46,11 @@
             <label for="email">Email (Optional):</label>
             <input type="email" id="email" name="email"><br><br>
 
-            <!-- Submit Button -->
             <button type="submit">Submit Report</button>
         </form>
 
-        <!-- Loading spinner -->
         <div id="loadingSpinner" class="spinner" style="display: none;">Submitting...</div>
 
-        <!-- Success message -->
         <div id="successMessage" style="display: none; color: green; text-align: center;">
             <h2>Report Submitted Successfully!</h2>
         </div>
