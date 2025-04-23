@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Dashboard</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <h2>PashuCure</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="#"><i class="fas fa-heartbeat"></i> Active Cases</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-chart-line"></i> Reports <span>&#x25BC;</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"><i class="fas fa-file-alt"></i> Case Reports</a></li>
+            <li><a href="#"><i class="fas fa-file-medical"></i> Treatment Reports</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><i class="fas fa-user-md"></i> Profile</a></li>
+        <li><a href="#"><i class="fas fa-cogs"></i> Settings</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <header>
+        <h1>Welcome, Doctor</h1>
+      </header>
+
+      <section class="overview">
+        <div class="card">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Active Cases</h3>
+          <p>5 active cases are waiting for treatment.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-bell"></i>
+          <h3>Notifications</h3>
+          <p>2 new notifications from the field team.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-stethoscope"></i>
+          <h3>Treatment Updates</h3>
+          <p>3 treatments need to be reviewed.</p>
+        </div>
+      </section>
+
+      <!-- Charts Section -->
+      <section class="charts">
+        <div class="chart-container">
+          <h3>Active Cases by Category</h3>
+          <canvas id="barChart"></canvas> <!-- Bar Chart -->
+        </div>
+        <div class="chart-container">
+          <h3>Treatment Progress Over Time</h3>
+          <canvas id="lineChart"></canvas> <!-- Line Chart -->
+        </div>
+        <div class="chart-container">
+          <h3>Case Treatment Status</h3>
+          <canvas id="pieChart"></canvas> <!-- Pie Chart -->
+        </div>
+      </section>
+
+      <!-- Modal for Notifications -->
+      <div class="modal" id="notificationModal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h3>New Notification</h3>
+          <p>You have a new urgent case that requires your attention immediately.</p>
+        </div>
+      </div>
+
+      <footer>
+        <p>Doctor Dashboard | 2025</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

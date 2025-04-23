@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <h2>PashuCure</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="#"><i class="fas fa-list"></i> All Cases</a></li>
+        <li><a href="#"><i class="fas fa-user"></i> My Reports</a></li>
+        <li><a href="#"><i class="fas fa-bell"></i> Notifications</a></li>
+        <li><a href="#"><i class="fas fa-cogs"></i> Settings</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <header>
+        <h1>Welcome, User</h1>
+      </header>
+
+      <section class="overview">
+        <div class="card">
+          <i class="fas fa-list"></i>
+          <h3>Total Cases</h3>
+          <p>12 cases reported.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-check-circle"></i>
+          <h3>Resolved Cases</h3>
+          <p>7 cases have been resolved.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-hourglass-half"></i>
+          <h3>Pending Cases</h3>
+          <p>5 cases are still under review.</p>
+        </div>
+      </section>
+
+      <!-- Charts Section -->
+      <section class="charts">
+        <div class="chart-container">
+          <h3>Cases by Type</h3>
+          <canvas id="barChart"></canvas> <!-- Bar Chart -->
+        </div>
+        <div class="chart-container">
+          <h3>Cases Reported Over Time</h3>
+          <canvas id="lineChart"></canvas> <!-- Line Chart -->
+        </div>
+        <div class="chart-container">
+          <h3>Case Resolution Status</h3>
+          <canvas id="pieChart"></canvas> <!-- Pie Chart -->
+        </div>
+      </section>
+
+      <footer>
+        <p>User Dashboard | 2025</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

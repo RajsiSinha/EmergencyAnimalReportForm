@@ -1,0 +1,126 @@
+/* Default Light Mode */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222;
+    --sidebar-bg: #ff6600;
+    --card-bg: #ffffff;
+    --button-bg: #ff6600;
+    --button-text: #ffffff;
+    --status-bg: #ff6600;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f4f4f4;
+    --sidebar-bg: #222;
+    --card-bg: #1e1e1e;
+    --button-bg: #ff6600;
+    --button-text: #ffffff;
+    --status-bg: #ff6600;
+}
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.container {
+    display: flex;
+}
+
+/* Charts Section - Reduce Graph Size */
+.chart-container {
+    background: var(--card-bg);
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px; /* Limit width */
+    height: 250px; /* Reduce height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 200px !important; /* Reduce height of the actual graph */
+}
+
+
+.sidebar {
+    background: var(--sidebar-bg);
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin: 20px 0;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-menu a i {
+    margin-right: 10px;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Cards */
+.overview {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Charts */
+.chart-container {
+    background: var(--card-bg);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: var(--sidebar-bg);
+    color: white;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Animal Report Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Emergency Animal Report Form</h1>
+        
+        <form id="animalReportForm">
+            <label for="location">Location of Incident:</label>
+            <input type="text" id="location" name="location" placeholder="Enter location or address" required><br><br>
+            <button type="button" id="getLocation">Use Current Location</button><br><br>
+
+            <label for="dateTime">Date and Time of Incident:</label>
+            <input type="datetime-local" id="dateTime" name="dateTime" required><br><br>
+
+            <label for="animalType">Type of Animal:</label>
+            <select id="animalType" name="animalType" required>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="cow">Cow</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label for="severity">Severity of Injury:</label>
+            <select id="severity" name="severity" required>
+                <option value="minor">Minor</option>
+                <option value="serious">Serious</option>
+                <option value="critical">Critical</option>
+            </select><br><br>
+
+            <label for="animalImage">Upload Picture (Optional):</label>
+            <input type="file" id="animalImage" name="animalImage" accept="image/*"><br><br>
+            <img id="imagePreview" src="" alt="Image Preview" style="display:none; max-width: 200px;"><br><br>
+
+            <label for="name">Name (Optional):</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="phone">Phone Number (Optional):</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. 123-456-7890"><br><br>
+
+            <label for="email">Email (Optional):</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <button type="submit">Submit Report</button>
+        </form>
+
+        <div id="loadingSpinner" class="spinner" style="display: none;">Submitting...</div>
+
+        <div id="successMessage" style="display: none; color: green; text-align: center;">
+            <h2>Report Submitted Successfully!</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
